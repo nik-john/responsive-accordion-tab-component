@@ -1,0 +1,110 @@
+
+html {
+  background: white;
+  color: grey;
+  padding: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a:link,a:visited,a:hover,a:focus,a:active {
+  color: #58C;
+}
+
+label {
+  cursor: pointer;
+}
+
+.tabs {
+  font-size: 0;
+  margin: 25px 0;
+}
+
+.tabs:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.tabs .tab {
+  display: inline;
+}
+
+.tabs .tab-label {
+  background: #eee; 
+  border: 1px solid #388e3c;
+  display: inline-block;
+  font-size: 16px;
+  font-size: 1rem;
+  left: 1px;
+  margin-left: -1px;
+  padding: 10px; 
+  position: relative;
+  vertical-align: bottom;
+}
+
+.tabs .tab > [type="radio"] {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  opacity: 0;
+  position: fixed;
+  width: 1px;
+  z-index: -1;
+}
+
+.tabs .tab-box {
+  display: inline;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  width: 0;
+}
+
+.tabs .tab-content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  background: white;
+  padding: 0 20px;
+  border: 1px solid #388e3c;
+  float: left;
+  font-size: 16px;
+  font-size: 1rem;
+  margin-top: -1px;
+  width: 100%;
+}
+
+.tabs .tab [type="radio"]:checked + .tab-label {
+  background: white;
+  border-bottom-width: 0;
+  padding-bottom: 11px;
+  z-index: 1;
+}
+
+.tabs .tab [type="radio"]:checked ~ .tab-box {
+  display: inline;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .tabs .tab > label {
+    background: #A5D6A7;
+    border-color: #E8F5E9;
+    border-top: 1px solid white;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .tabs .tab [type="radio"]:checked + .tab-label {
+    background: #66BB6A;
+    border-color: #388E3C;
+    color: #FAFAFA;
+  }
+  .tabs .tab-content {
+    border-color: #388e3c;
+}
+}

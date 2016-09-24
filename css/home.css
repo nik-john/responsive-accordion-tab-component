@@ -1,0 +1,16 @@
+html,
+body {
+    background: white;
+    color: grey;
+    padding: 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid grey;
+    text-decoration: none;
+    color: #00ACC1;
+    display: inline;
+}
