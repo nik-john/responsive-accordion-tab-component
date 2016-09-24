@@ -67,6 +67,7 @@
                     <h3 class="dynamic-title"></h3>
                     <p class="dynamic-text"></p>
                     <button class="clear-ls">Clear Session</button>
+                    <br>
                 </div>
             </div>
         </div>
@@ -88,6 +89,8 @@
                     $('.dynamic-title').html(data.title);
                     $('.dynamic-text').html(data.body);
                     localStorage.setItem('fetched', 'true');
+                console.log("Success! Element populated with Dynamic Data!");
+
                 });
             } else {
                 console.log("Aborting. Data has already been fetched.")
@@ -96,6 +99,7 @@
 
         $('.clear-ls').on('click', function() {
             clearLs();
+            console.log("Session cleared!");
         });
     });
     </script>

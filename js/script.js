@@ -14,9 +14,10 @@ $(document).ready(function() {
 				$('.dynamic-title').html(data.title);
 				$('.dynamic-text').html(data.body);
 				localStorage.setItem('fetched', 'true');
+				console.log("Success! Element populated with Dynamic Data!");
 			});
 		} else {
-			console.log("Aborting. Data has already been fetched.")
+			console.log("Aborting. Data has already been fetched!")
 		}
 	});
 });
