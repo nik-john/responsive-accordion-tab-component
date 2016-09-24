@@ -1,5 +1,9 @@
-var root = 'http://jsonplaceholder.typicode.com';
-localStorage.removeItem('fetched');
+var root = 'https://jsonplaceholder.typicode.com';
+
+function clearLs() {
+	localStorage.removeItem('fetched');
+}
+clearLs();
 $(document).ready(function() {
 	$('#tab-5 + .tab-label').on('click', function() {
 		if (localStorage.getItem('fetched') !== 'true') {
@@ -15,4 +19,4 @@ $(document).ready(function() {
 			console.log("Aborting. Data has already been fetched.")
 		}
 	});
-})
+});
